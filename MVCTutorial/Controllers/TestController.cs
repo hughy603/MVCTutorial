@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MVCTutorial.Models;
 
 namespace MVCTutorial.Controllers
 {
@@ -15,6 +16,11 @@ namespace MVCTutorial.Controllers
 
         public ActionResult GetView()
         {
+            Employee emp = new Employee();
+            emp.FirstName = "Adam";
+            emp.LastName = "Rice";
+            emp.Salary = 100;
+            ViewData["Employee"] = emp;
             return View("MyView");
         }
     }

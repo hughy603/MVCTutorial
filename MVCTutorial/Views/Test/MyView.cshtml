@@ -11,8 +11,14 @@
     <title>MyView</title>
 </head>
 <body>
-    <div> 
-        Learning MVC
+    <div>
+        @{
+            MVCTutorial.Models.Employee emp = (MVCTutorial.Models.Employee)
+                ViewData["Employee"];
+        }
+        <b>Employee Name</b><br />
+        @emp.FirstName @emp.LastName<br />
+        @emp.Salary.ToString("C")
     </div>
 </body>
 </html>
