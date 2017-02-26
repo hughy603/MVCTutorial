@@ -12,5 +12,10 @@ namespace MVCTutorial.Controllers
         {
             return "Hello World abc";
         }
+
+        public ActionResult GetView()
+        {
+            return View("MyView");
+        }
     }
 }
